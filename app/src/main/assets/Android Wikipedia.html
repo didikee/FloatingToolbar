@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Android Wikipedia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Android Wikipedia</h1>
+<h2>Android</h2>
+<p>Android（读音：英：['ændrɔɪd]，美：[ˈænˌdrɔɪd]），中文俗称安卓，是一个基于Linux内核的开放源代码移动操作系统，由Google成立的Open Handset Alliance（OHA，开放手持设备联盟）持续领导与开发，主要设计用于触屏移动设备如智能手机和平板电脑与其他便携式设备。</p>
+<p>Android最初由安迪·鲁宾（Andy Rubin）等人开发制作[6]，最初开发这个系统的目的是创建一个数码相机的先进操作系统；但是后来发现市场需求不够大，加上智能手机市场快速成长，于是Android被改造为一款面向智能手机的操作系统。于2005年7月11日被美国科技企业Google收购[7] [8]。2007年11月，Google与84家硬件制造商、软件开发商及电信营运商成立开放手持设备联盟来共同研发改良Android，随后，Google以Apache免费开放源代码许可证的授权方式，发布了Android的源代码[9]，开放源代码加速了Android普及，让生产商推出搭载Android的智能手机[10][11][12][13]，Android后来更逐渐拓展到平板电脑及其他领域上[14]。</p>
+<p>2010年末数据显示，仅正式推出两年的Android操作系统在市场占有率上已经超越称霸逾十年的诺基亚Symbian系统[15][16]，成为全球第一大智能手机操作系统[17]。</p>
+<p>在2014年Google I/O开发者大会上Google宣布过去30天里有10亿台活跃的安卓设备，相较于2013年6月则是5.38亿[18]。</p>
+<h2>Android命名由来</h2>
+<p>Android一词最早出现于法国作家利尔亚当（Auguste Villiers de l'Isle-Adam）在1886年发表的科幻小说《未来夏娃》（L'Ève future）中。他将外表像人的机器人取名为Android。</p>
+<h2>Android标志</h2>
+<p>Android是一个全身绿色的机器人，颜色采用了PMS 376C和RGB中十六进制的#A4C639来绘制，这是Android操作系统的品牌象征[19]。有时候，它会以纯文字的标志展示。[20]
+Android的标志是由Ascender公司设计的，其中的文字使用了Ascender公司专门制作的称之为“Google Droid”的字体[21]。</p>
+<h2>历史</h2>
+<h3>成立</h3>
+<p>2003年10月，有“Android之父”之称的安迪·鲁宾（Andy Rubin）[22]在美国加利福尼亚州帕洛阿尔托创建了Android科技公司（Android Inc.），并与利奇·米纳尔（Rich Miner）[23]、尼克·席尔斯（Nick Sears）[24]、克里斯·怀特（Chris White）[25]共同发展这家公司。谈到创建Android科技公司的原因，鲁宾说：“聪明的移动设备能更好的意识到用户的爱好和要求。”[26]尽管Android科技公司的创始人和员工过去都具有各自的科技成就，但是Android科技公司的经营只显露出它在智能手机软件的方面。</p>
+<p>同年，鲁宾为Android科技公司花光所有钱。就在这时，史蒂夫·帕尔曼（Steve Perlman）递给了鲁宾一个信封，在里面装有1万美元的现金；帕尔曼并不是以投资的方式给鲁宾这笔钱，因为他拒绝了鲁宾给他的股份。[27]</p>
+<h3>Google的收购及发展</h3>
+<p>2005年7月11日，Google收购了Android科技公司，Android科技公司成为Google旗下的一部分。包括利奇·米纳尔、克里斯·怀特等所拥有的全资子公司，所有Android科技公司的员工都被并入Google。当时没有人知道Google为什么作出这项收购，有许多的猜测，后来证明Google正是借助此次收购正式进入移动领域。</p>
+<p>在Google，鲁宾领导着一个负责开发基于Linux内核移动操作系统的团队，这个开发项目便是Android操作系统。Google的合作平台为Android提供了广阔的市场，Google给予各大硬件制造商、软件开发商一个灵活可靠的系统升级承诺，并保证将给予它们最新版本的操作系统。</p>
+<p>2006年12月，《华尔街日报》和英国广播公司（BBC）报导了Google有可能进入移动领域的传闻，Google有可能推广移动领域下的各种Google服务，并且将推出一款名为Google电话的自有品牌智能手机。另有传闻指出，按照Google的作风，将有可能呈现出新的智能手机制造商和运营商模式。</p>
+<p>2007年9月，Google提交了多项移动领域的专利申请。但并没有人知道，Google将会推出的是一款名为Android的智能手机操作系统。更多的猜测是，Google会推出一款像iPhone一样的自有品牌智能手机系列。[28][29][30]</p>
+<h3>成立开放手持设备联盟</h3>
+<p>2007年11月5日，在Google的领导下，成立开放手持设备联盟（Open Handset Alliance），最早的一批成员包括Broadcom、HTC、Intel、LG、Marvell、Samsung等公司。开放手持设备联盟的创建目的是为了创建一个更加开放自由的移动电话环境。而在开放手持设备联盟创建的同一日，联盟对外展示了他们的第一个产品：一部搭载了以Linux 2.6为核心基础的Android操作系统的智能手机。2008年12月9日，新一批成员加入开放手持设备联盟，包括ARM、华为、索尼、小米等公司。[31][32]</p>
+<p>同时，一个负责持续发展Android操作系统的开源代码项目成立了AOSP（Android Open Source Project）。[33]除了开放手持设备联盟之外，Android还拥有全球各地开发人员组成的开源社区来专门负责开发Android应用程序和第三方Android操作系统来延长和扩展Android的功能和性能。[34][35]</p>
+<h3>许可证</h3>
+<p>Android操作系统使用开放免费代码许可证，一切代码为公开免费[36]的。Google将Android的大部分以Apache开源条款2.0发布，剩下的Linux内核部分则继承GPLv2许可，[37][38][39][40]AOSP包括了智能手机网络和电话协议栈等智能手机所必需的功能。Google也不断发布问卷和开放修改清单、更新情况和代码来让任何人看到并且提出他们的意见和评论，以便按照用户的要求改进Android操作系统。</p>
+<p>Android操作系统是完全免费开源的，任何厂商都不须经过Google和开放手持设备联盟的授权随意使用Android操作系统；但是制造商不能在未授权下在产品上使用Google的标志和应用程序，例如Google Play等。除非Google证明其生产的产品设备匹配Google兼容性定义文件（CDD），这才能在智能手机上预装Google Play Store、Gmail等Google的私有应用程序，并且获得CDD，此外，智能手机厂商也可以在其生产的智能手机上印上“With Google”的标志[41]。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

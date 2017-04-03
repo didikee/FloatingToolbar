@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="sa_green">#1E9618</color>
+    <color name="sa_green_transparent">#201E9618</color>
+    <color name="sa_accent">#4EE147</color>
 </resources>
