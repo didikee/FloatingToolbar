@@ -12,4 +12,16 @@
     <item android:id="@+id/setting"
           android:title="Setting"
           app:showAsAction="always" />
+
+    <item android:id="@+id/setting2"
+          android:title="Setting2"
+          app:showAsAction="always" />
+
+    <item android:id="@+id/setting3"
+          android:title="Setting3"
+          app:showAsAction="never" />
+
+    <item android:id="@+id/setting4"
+          android:title="Setting4"
+          app:showAsAction="never" />
 </menu>

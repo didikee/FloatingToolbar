@@ -26,4 +26,4 @@
     android:paddingEnd="4dp"
     android:src="@drawable/ic_menu_moreoverflow_material_dark"
     android:contentDescription="@string/floating_toolbar_open_overflow_description"
-    android:background="@drawable/item_background_borderless_material_dark" />
+    android:background="@drawable/item_background_borderless_material_light" />

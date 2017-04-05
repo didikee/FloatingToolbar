@@ -5,6 +5,7 @@
     <color name="ripple_material_dark_v7">#33ffffff</color>
     <color name="ripple_material_light_v7">#1f000000</color>
     <color name="background_floating_material_dark_v7">#ff424242</color>
+    <color name="background_floating_material_light_v7">@color/white</color>
     <!--正式的颜色还未知-->
     <color name="secondary_text_material_dark_v">#000000</color>
     <color name="secondary_text_material_light_v">#FFFFFF</color>
